@@ -7,6 +7,8 @@ abstract public class Employee {
 
     public static int countEmployee;
 
+    abstract public void increaseWorkId();
+
     public Employee(int workId, String firstName, String lastName) {
         this.workId = workId;
         this.firstName = firstName;

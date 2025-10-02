@@ -12,6 +12,11 @@ public class Admin extends Employee {
         super();
     }
 
+    @Override
+    public void increaseWorkId() {
+        setWorkId(getWorkId() + 10);
+    }
+
     public String getDepartment() {
         return department;
     }
@@ -20,5 +25,7 @@ public class Admin extends Employee {
         this.department = department;
     }
 
-
+    public String departmentToWork(){
+        return "Работник" + getFirstName() + " " + getLastName() + " назначен в " +getDepartment();
+    }
 }

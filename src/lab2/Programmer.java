@@ -12,6 +12,11 @@ public class Programmer extends Employee {
         this.salary = salary;
     }
 
+    @Override
+    public void increaseWorkId() {
+        setWorkId(getWorkId() + 25);
+    }
+
     public int getSalary() {
         return salary;
     }
@@ -21,6 +26,6 @@ public class Programmer extends Employee {
     }
 
     public String getFirstName() {
-        return "Зарплата: " + getFirstName() + " " + getLastName() + " равна " + getSalary();
+        return "Зарплата: " + getFirstName() + " " + getLastName() + " = " + salary;
     }
 }
