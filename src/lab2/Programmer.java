@@ -24,8 +24,4 @@ public class Programmer extends Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
-
-    public String getFirstName() {
-        return "Зарплата: " + getFirstName() + " " + getLastName() + " = " + salary;
-    }
 }

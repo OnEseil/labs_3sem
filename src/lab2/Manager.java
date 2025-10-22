@@ -26,7 +26,7 @@ public class Manager extends Employee {
         this.task = task;
     }
 
-    public String manageTask(String task) {
+    public String manageTask() {
         return "Менеджер c айди:" + getWorkId() + " назначает задачу: " + task;
     }
 
