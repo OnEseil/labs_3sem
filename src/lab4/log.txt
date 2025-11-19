@@ -1,0 +1,4 @@
+[lab4.CustomDivisionException.Division(CustomDivisionException.java:30),
+lab4.CustomDivisionException.main(CustomDivisionException.java:11)]
+[lab4.CustomDivisionException.Division(CustomDivisionException.java:30),
+ lab4.CustomDivisionException.main(CustomDivisionException.java:11)]
