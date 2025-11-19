@@ -76,7 +76,6 @@ public class HashTable<K, V> {
     public String toString() {
         return "HashTable{" +
                 "table=" + Arrays.toString(table) +
-                ", size=" + size +
                 '}';
     }
 
@@ -99,6 +98,10 @@ public class HashTable<K, V> {
 
         public void setValue(V value) {
             this.value = value;
+        }
+        @Override
+        public String toString() {
+            return key + "=" + value;
         }
     }
 }
