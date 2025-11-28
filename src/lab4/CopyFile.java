@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class CopyFile {
     public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class CopyFile {
         FileOutputStream out = null;
 
         try {
-            in = new FileInputStream("src/lab4/file1.txt");
+            in = new FileInputStream("src/lab4/file.txt");
             out = new FileOutputStream("src/lab4/file_copy.txt");
 
             int byteData;
@@ -19,7 +20,7 @@ public class CopyFile {
                 out.write(byteData);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("нет такого фйла");
+            System.out.println("нет такого файла");
         } catch (IOException e) {
             System.out.println("Ошибка ввода или вывода");
         } finally {
