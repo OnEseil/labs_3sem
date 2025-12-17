@@ -8,7 +8,7 @@ public class FindLowerCaseAfterUpper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String text = scanner.nextLine();
-        Pattern pattern = Pattern.compile("([a-z][A-Z])");
+        Pattern pattern = Pattern.compile("[a-z][A-Z]");
         Matcher matcher = pattern.matcher(text);
         while(matcher.find()){
             System.out.print(matcher.group() + " ");

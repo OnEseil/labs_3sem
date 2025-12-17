@@ -1,14 +1,22 @@
 package lab6;
 
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import java.util.*;
-
-import java.util.*;
-
 public class SalesManager {
     private LinkedHashMap<String, ProductInfo> sales = new LinkedHashMap<>();
+
+    public static void main(String[] args) {
+        SalesManager sm = new SalesManager();
+        sm.addProduct("Хлеб", 1.2);
+        sm.addProduct("Молоко", 1.5);
+        sm.addProduct("Хлеб", 1.2);
+
+        sm.printSales();
+        System.out.println("Сумма продаж: " + sm.getTotalSum());
+        System.out.println("Самый популярный товар: " + sm.getMostPopular());
+    }
 
     public void addProduct(String name, double price) {
         if (sales.containsKey(name)) {
@@ -38,18 +46,6 @@ public class SalesManager {
                 .map(Map.Entry::getKey)
                 .orElse("Нет данных");
     }
-
-    public static void main(String[] args) {
-        SalesManager sm = new SalesManager();
-        sm.addProduct("Хлеб", 1.2);
-        sm.addProduct("Молоко", 1.5);
-        sm.addProduct("Хлеб", 1.2);
-
-        sm.printSales();
-        System.out.println("Сумма продаж: " + sm.getTotalSum());
-        System.out.println("Самый популярный товар: " + sm.getMostPopular());
-    }
-
 
     class ProductInfo {
         double price;
